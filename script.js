@@ -1,21 +1,18 @@
+let i = 10;
+let d = document.getElementById("div");  
 function btnfun() {
-  let i = 10;
   let a = (f)=>{
-    let d = document.createElement("div");
-    d.classList.add("fs-3");
-    document.getElementById("maindiv").appendChild(d);  
-    console.log(i);
-    d.innerText = i;
-    if(i==1){
-      console.log("Happy Independence Day") ;
-      let d1 = document.createElement("div");
-      d1.classList.add("fs-3");
-      document.getElementById("maindiv").appendChild(d1);
-      d1.innerText = "Happy Independence Day";
-      return;
-    }
-    i--;
-    f(a);
+    setTimeout(() => {
+      if(i>=1){ 
+        d.innerText = i;
+      }
+      if(i==0){
+        d.innerText = "Happy Independence Day";
+        return;
+      }
+      i--;
+      f(a);
+    },1000);
   }
   let b = (f)=>{
     f(b);
