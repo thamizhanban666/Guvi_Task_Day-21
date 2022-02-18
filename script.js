@@ -1,6 +1,6 @@
-let i = 10;
 let d = document.getElementById("div");  
-function btnfun() {
+btnfun = () => {
+  let i = 10;
   let a = (f)=>{
     setTimeout(() => {
       if(i>=1){ 
